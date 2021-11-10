@@ -12,6 +12,7 @@ import { PublicRoute } from './PublicRoute';
 import { PrivateRoute } from './PrivateRoute';
 import { HomePage } from '../pages/HomePage';
 import { AuthRouter } from './AuthRouter';
+import { Loading } from '../components/ui/Loading';
 
 export const AppRouter = () => {
 
@@ -25,7 +26,7 @@ export const AppRouter = () => {
     }, [dispatch])
 
     if ( checking ) {
-        return (<h5>Wait...</h5>);
+        return ( <Loading />);
     }
 
     return (
