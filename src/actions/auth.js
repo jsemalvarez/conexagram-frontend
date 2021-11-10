@@ -13,7 +13,7 @@ export const startLogin = ( email, password ) => {
 
         try {
             
-            const resp = await fetchSinToken( 'auth', { email, password }, 'POST' );
+            const resp = await fetchSinToken( 'auth/', { email, password }, 'POST' );
             const body = await resp.json();
     
             if( body.ok ) {
