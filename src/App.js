@@ -1,10 +1,16 @@
+import React from 'react';
+import { Provider } from 'react-redux';
+
+import { store } from './store/store';
+import { AppRouter } from './router/AppRouter'
+
 import './App.css';
 
 const App = () => {
   return (
-    <main>
-      <h1>CONEXAGRAM</h1>
-    </main>
+    <Provider store={ store }>
+        <AppRouter />
+    </Provider>
   );
 }
 
